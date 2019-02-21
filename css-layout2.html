@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> css layout basic</title>
+        <style>
+        body
+        {
+            width: 500px;
+            margin: 10px auto;
+        }
+        #top
+        {
+            background: rgba(28,245,152,0.5);
+        }
+
+        #middle
+        {
+            overflow: hidden;
+        }
+
+        #left
+        {
+            float: left;
+            width: 150px;
+            background: rgba(128,145,192,0.5);
+        }
+
+        #right
+        {
+            float: right;
+            width: 350px;
+            background: rgba(128,5,172,0.5);
+        }
+
+        #bottom
+        {
+            background: rgba(228,5,112,0.5);
+        }
+
+        .top_bar
+        {
+            background: rgba(28,5,12,0.5);
+            position: fixed;
+            left:   0;
+            top:    0;
+            right:  0;
+            height: 50px;
+
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .left_bar
+        {
+            background: rgba(228,125,2,0.5);
+            position: fixed;
+            left:   0;
+            top:    50px;
+            bottom: 0;
+            width:  50px;
+
+            font-size: small;
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="top_bar">
+            top_bar 는 커피 술집?
+        </div>
+        <div class="left_bar">
+            left_bar 는 왼쪽막대기
+        </div>
+        <div id="top">
+            web page Top 는 커피
+        </div>
+        <!--부모-->
+        <div id="middle">
+            <!--자식-->
+            <div id="left">
+                web page left 는 어디
+            </div>
+
+            <div id="right">
+                web page right 는 옳다
+            </div>
+
+        </div>
+
+        <div id="bottom">
+            web page bottom 는 원딜 서폿
+        </div>
+
+    </body>
+</html>
