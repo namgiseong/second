@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> css layout basic</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+            div.container
+            {
+                overflow: hidden;
+            }
+
+            div.item
+            {
+                float: left;
+                margin: 0 3px;
+                padding: 10px;
+                border: 1px solid black;
+            }
+            div.center
+            {
+                margin: 0 auto; width: 960px;
+            }
+            #grid
+            {
+                border: 5px solid  rgba(28,245,152,0.5);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            div.content
+            {
+                border: 5px solid gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="grid">
+            <div class="content">
+                navigation
+            </div>
+            <div class="content">
+                CSS 정보는 다양한 원천으로부터 제공받을 수 있다.
+
+이러한 원천으로는 웹 브라우저, 사용자, 제작자가 될 수 있다.
+
+제작자로부터의 정보는 더 나아가 인라인, 미디어 타입, 중요성, 셀렉터 특정, 규칙 순서, 상속, 프로퍼티 정의로 분류될 수 있다.
+
+CSS 스타일의 정보는 별도의 문서에 있을 수 있고, HTML 문서에 직접 추가할 수도 있다.
+
+사용되는 출력 장치에 따라 다른 스타일을 적용할 수 있다.
+
+이를테면 화면 버전은 인쇄 버전과 매우 다르므로 제작자는 각 매체에
+            </div>
+        </div>
+        <div class="container">
+            <div class="item">
+                menu-1
+            </div>
+            <div class="item">
+                menu-2
+            </div>
+            <div class="item">
+                menu-3
+            </div>
+            <div class="item">
+                menu-4
+            </div>
+            <div class="item">
+                menu-5
+            </div>
+
+        </div>
+        <div class="center">
+            <h1>html / css / javascript</h1>
+            <h2>외곽 더미 객체######</h2>
+            <p>CSS 정보는 다양한 원천으로부터 제공받을 수 있다.</p>
+            <p>이러한 원천으로는 웹 브라우저, 사용자, 제작자가 될 수 있다.</p>
+            <p>제작자로부터의 정보는 더 나아가 인라인, 미디어 타입, 중요성, 셀렉터 특정, 규칙 순서, 상속, 프로퍼티 정의로 분류될 수 있다.</p>
+            <p>CSS 스타일의 정보는 별도의 문서에 있을 수 있고, HTML 문서에 직접 추가할 수도 있다.</p>
+            <p>사용되는 출력 장치에 따라 다른 스타일을 적용할 수 있다.</p>
+            <p>이를테면 화면 버전은 인쇄 버전과 매우 다르므로 제작자는 각 매체에 적절한 표현 방식을 사용할 수 있다.</p>
+            <p>A</p>
+            <p>B</p>
+            <p>C</p>
+            <p>D</p>
+            <p>E</p>
+
+        </div>
+    </body>
+</html>
