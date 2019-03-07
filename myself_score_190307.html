@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>내가 만들어보는 성적 처리 프로그램</title>
+    </head>
+
+    <body>
+        <h1>성적 처리 프로그램</h1>
+        <div id="score_process">
+            <form>
+                <ul>
+                    <li>
+                        <label for="txt-name">이름</label>
+                        <input type="text" id="txt-name" autofocus />
+                    </li>
+                    <li>
+                        <label for="btn_searhch"></label>
+                        <input type="button" id="btn-search" value="검색" onclick="search_student()" />
+                    </li>
+                    <li>
+                        <label for="txt-subject1">과목1 점수</label>
+                        <input type="text" id="txt-subject1" />
+                    </li>
+                    <li>
+                        <label for="txt-subject2">과목2 점수</label>
+                        <input type="text" id="txt-subject2" />
+                    </li>
+                    <li>
+                        <label for="txt-subject3">과목3 점수</label>
+                        <input type="text" id="txt-subject3" />
+                    </li>
+                    <input type="button" id="btn-save" value="저장" onclick="input_student()" />
+                </ul>
+            </form>
+        </div>
+        <div id="pn-scoretable">
+            <table id="scoretable-input" border="1" >
+            </table>
+        </div>
+        <div id="pn-sortScoretable">
+            <table id="scoretable-average" border="1" >
+            </table>
+        </div>
+        <script src="scoretable.js"></script>
+
+        <script>
+            const MAX_SUBJECTS = 3;
+            const EXCELLENT = 90;
+            const FAIL = 60;
+            const MAX_SUBJECT = 100;
+            const MIN_SUBJECT = 0;
+
+            let students = [];
+            let sortStudents = [];
+
+
+        </script>
+    </body>
+</html>
