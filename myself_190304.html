@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> 성적 처리하기 </title>
+        <style>
+            body
+            {
+                /*background-image: url("iot_network.jpg");*/
+                background-color: rgba(8,5,2,0.1);
+                color: rgba(28,75,142,0.7)
+            }
+            form.input_place
+            {
+                float : left;
+                /*display: inline-table;*/
+                padding-left: 10px; padding-right: 10px;
+                border: solid 5px rgba(28,75,142,0.6);
+            }
+
+            #student_name_input
+            {
+                /*background-color: rgba(178,175,242,0.8);*/
+                width: 80px;
+                height: 18px;
+                color: rgba(128,175,242,0.8);
+                text-align: center;
+            }
+            #first_score_input
+            {
+                /*background-color: rgba(8,5,2,0.8);*/
+                width: 50px;
+                height: 18px;
+                color: rgba(128,175,242,0.8);
+                text-align: center;
+            }
+            #second_score_input
+            {
+                /*background-color: rgba(8,5,2,0.8);*/
+                width: 50px;
+                height: 18px;
+                color: rgba(128,175,242,0.8);
+                text-align: center;
+            }
+            #third_score_input
+            {
+                /*background-color: rgba(8,5,2,0.8);*/
+                width: 50px;
+                height: 18px;
+                color: rgba(128,175,242,0.8);
+                text-align: center;
+            }
+
+            section.search_place
+            {
+                /*display: inline-table;*/
+                float : left;
+                padding-left: 10px; padding-right: 10px;
+                border: solid 5px rgba(28,175,142,0.6);
+            }
+
+            section.monitor_place
+            {
+                /*display: block;*/
+                clear: both;
+                padding-left: 10px; padding-right: 10px;
+                border: solid 5px rgba(28,175,142,0.6);
+            }
+
+        </style>
+    </head>
+    <script>
+        var student_array = new Array;
+        let count = 0;
+
+
+        function student(student_name , student_first_score , student_second_score , student_third_score)
+        {
+            this.name = student_name ,
+            this.first_score = student_first_score,
+            this.second_score = student_second_score,
+            this.third_score = student_third_score
+        };
+
+        function register()
+        {
+            student_array[count] = new student(student_name , student_first_score , student_second_score , student_third_score);
+            document.write(`${student_array[count]}`);
+            count+=1;
+            console.log(`${student_array}`);
+        };
+
+
+    </script>
+    <body>
+        <h1> 성적 처리 프로그램 </h1>
+        <hr>
+        <div class="score_process">
+            <form class="input_place" action="" method="">
+                <h3>학생 추가하기</h3>
+                이름 : <input type="text" name="student_name" id="student_name_input">
+
+                첫번째 시험 : <input type="text" name="student_first_score" id="first_score_input">
+
+                두번째 시험 : <input type="text" name="student_second_score" id="second_score_input">
+
+                세번째 시험 : <input type="text" name="student_third_score" id="third_score_input">
+                <!--<input type="button" name="register" value="등록" action="register(student_name , student_first_score , student_second_score , student_third_score)">
+-->
+                <button data-action="register" data-containing="" onclick="register(student_name,student_first_score,student_second_score,student_third_score)">
+                    추가
+                </button>
+            </form>
+
+
+            <section class="search_place">
+                <h3>학생 찾기</h3>
+                <label for="student_name:" name="label" value="">이름</label>
+                <input type="text" name="student_name" id="student_name_input">
+                <button data-action="search" data-containing=input>
+                    검색
+                </button>
+                <input type="reset" name="reset_button" value="리셋">
+            </section>
+
+            <section class="monitor_place">
+                <h2> html 강좌 </h2>
+                <p value=student_array></p>
+
+
+            </section>
+
+
+            <script src="myself_190304.js">
+
+        </div>
+    </body>
+</html>
